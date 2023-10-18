@@ -176,7 +176,7 @@ main {
   color: #444;
   border-radius: 10rem;
   cursor: pointer;
-  /* position: absolute; */
+  position: absolute;
 }
 .close-modal {
   position: absolute;

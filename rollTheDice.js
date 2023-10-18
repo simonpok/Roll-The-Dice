@@ -11,6 +11,10 @@ const diceEl = document.querySelector('.dice');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
+const model = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const btnsOpenModal = document.querySelector('.show-modal');
+const btnCloseModel = document.querySelector('.close-modal');
 let scores, currentScore, activePlayer, playing;
 const init = () => {
   //Starting process
@@ -98,3 +102,30 @@ btnHold.addEventListener('click', () => {
 });
 
 btnNew.addEventListener('click', init);
+
+btnsOpenModal.addEventListener('click', () => {
+  model.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+});
+
+//close the pop-up window then the X button is clicked
+btnCloseModel.addEventListener('click', () => {
+  model.classList.add('hidden');
+  overlay.classList.add('hidden');
+});
+
+//close the pop-up window then we click outside that box
+overlay.addEventListener('click', () => {
+  model.classList.add('hidden');
+  overlay.classList.add('hidden');
+});
+
+//close the pop-up window when Escape key is pressed
+document.addEventListener('keydown', e => {
+  //e is for event
+
+  if (e.key === 'Escape' && !model.classList.contains('hidden')) {
+    model.classList.add('hidden');
+    overlay.classList.add('hidden');
+  }
+});

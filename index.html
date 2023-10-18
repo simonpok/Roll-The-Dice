@@ -24,22 +24,26 @@
           <p class="current-label">Current</p>
           <p class="current-score" id="current--1">0</p>
         </div>
-
-        <div class="modal hidden">
-          <button class="close-modal">&times;</button>
-          <h1>I'm a modal window 😍</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-        <div class="overlay hidden"></div>
       </section>
+      <button class="show-modal">help</button>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1>Rules❓</h1>
+        <p>
+          <h2></br>1. Two players take turns rolling a dice</br>
+            2. If a player rolls a 1, their turn ends, and the other player takes over.</br>
+            3. If a player rolls a number between 2 and 6, that number is added to their current score for the turn.</br>
+            4. If a player rolls a 1 on their turn, their current score becomes 0, and the other player takes over.</br>
+            5. A player can choose to "hold" their current score, and it gets added to their total score. The turn then passes to the other player.</br>
+            6. The game continues until one player reaches a total score of 50, at which point they win.</br>
+            &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;
+            &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp; ENJOY 🥳🍻🎲!!!
+                                      
+            </h2>
+        </p>
+      </div>
+      <div class="overlay hidden"></div>
 
       <img src="dice-5.png" alt="Playing dice" class="dice" />
       <button class="btn btn--new">🔄 New game</button>
@@ -47,9 +51,6 @@
       <button class="btn btn--hold">📥 Hold</button>
     </main>
 
-    <div class="show-modal">
-      <button class="show-modal">Show modal 1</button>
-    </div>
     <script src="rollTheDice.js"></script>
   </body>
 </html>
